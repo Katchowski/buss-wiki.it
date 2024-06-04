@@ -1,4 +1,5 @@
 local loadSites = get("loadSites")
+local list = get("list")
 
 loadSites.on_click(showList())
 
@@ -17,5 +18,5 @@ function showList()
 end
 
 function createList(data)
-    --call php script--
+    list.set_content(data)
 end
