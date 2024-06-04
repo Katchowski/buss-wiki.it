@@ -1,9 +1,11 @@
+print('Hello, World!')
+
 local loadSites = get('loadSites')
 local list = get('list')
 
-loadSites.on_click(showList())
+loadSites.on_click(ShowList())
 
-function getSites()
+function GetSites()
     --local res = fetch({
         --url = "https://api.buss.lol/domains",
         --method = "GET"
@@ -11,13 +13,13 @@ function getSites()
     return "returned value"
 end
 
-function showList()
+function ShowList()
     loadSites.set_content('Loading...')
     --local response = getSites()
     --local data = response:json()
     --createList(data)
 end
 
-function createList(data)
+function CreateList(data)
     list.set_content('It is working!')
 end
