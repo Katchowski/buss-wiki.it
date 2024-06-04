@@ -1,5 +1,5 @@
-local loadSites = get("loadSites")
-local list = get("list")
+local loadSites = get('loadSites')
+local list = get('list')
 
 loadSites.on_click(showList())
 
@@ -12,12 +12,12 @@ function getSites()
 end
 
 function showList()
-    loadSites.set_content("Loading...")
+    loadSites.set_content('Loading...')
     --local response = getSites()
     --local data = response:json()
     --createList(data)
 end
 
 function createList(data)
-    list.set_content("It is working!")
+    list.set_content('It is working!')
 end
