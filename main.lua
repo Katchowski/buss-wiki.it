@@ -12,6 +12,7 @@ function getSites()
 end
 
 function showList()
+    loadSites.set_content("Loading...")
     local response = getSites()
     local data = response:json()
     createList(data)
