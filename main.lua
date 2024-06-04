@@ -1,6 +1,6 @@
 local loadSites = get("loadSites")
-showList()
 
+loadSites.on_click(showList())
 
 function getSites()
     local res = fetch({
