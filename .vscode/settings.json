@@ -1,8 +1,0 @@
-{
-    "Lua.diagnostics.globals": [
-        "get",
-        "createList",
-        "showList",
-        "getSites"
-    ]
-}
