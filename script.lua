@@ -3,6 +3,7 @@ local list = get('list')
 local status = get('status')
 local searchbox = get('search')
 local ignore = '"{'
+local format = ':'
 
 status.set_content('Status: get elements complete')
 
@@ -35,6 +36,7 @@ function Split(inputstr, sep, sep2, search)
                 str2 = str2 ..  el .. '\n\n'
             end
             str2 = str2:gsub("["..ignore.."]+", "")
+            str2 = str2:gsub("["..format.."]+", ": ")
         end
         if search == nil then
             table.insert(t, (str2))
