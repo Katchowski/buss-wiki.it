@@ -3,9 +3,9 @@ print('Hello, World!')
 local loadSites = get('loadSites')
 local list = get('list')
 
-print('Hello Again, World!')
-
 loadSites.on_click(ShowList())
+
+print('Hello Again, World!')
 
 function GetSites()
     local res = fetch({
