@@ -1,16 +1,14 @@
 print('Hello, World!')
 
---local loadSites = get('loadSites')
+local loadSites = get('loadSites')
 local list = get('list')
-
---loadSites.set_content('Loading...')
-list.set_content('It is working!')
 
 print('Hello Again, World!')
 
---[[loadSites.on_click(ShowList())
+loadSites.on_click(ShowList())
 
 function GetSites()
+    list.set_content('Loading...')
     local res = fetch({
         url = "https://api.buss.lol/domains",
         method = "GET"
@@ -27,4 +25,4 @@ end
 
 function CreateList(data)
     list.set_content('It is working!')
-end]]--
+end
