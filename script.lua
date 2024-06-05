@@ -11,9 +11,9 @@ print('button clicked')
 
 function ShowList()
     print('showList called')
-    local response = getSites()
+    local response = GetSites()
     local data = response:json()
-    createList(data)
+    CreateList(data)
 end
 
 function GetSites()
@@ -28,5 +28,5 @@ end
 
 function CreateList(data)
     print('createList called')
-    list.set_content(res)
+    list.set_content(data)
 end
