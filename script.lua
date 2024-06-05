@@ -12,5 +12,5 @@ loadSites.on_click(function()
         method = "GET",
         headers = {["Content-Type"] = "Application/json"}
     })
-    list.set_content('data loaded')
+    list.set_content(res)
 end)
