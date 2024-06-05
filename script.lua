@@ -12,5 +12,20 @@ loadSites.on_click(function()
         headers = {['Content-Type'] = 'Application/json'}
     })
     status.set_content('fetch complete')
-    list.set_content(data)
+    local res = json.stringify(data)
+    list.set_content(table.concat(Split(res, '}')))
 end)
+
+--https://stackoverflow.com/questions/1426954/split-string-in-lua
+function Split(inputstr, sep)
+    if sep == nil then
+      sep = "%s"
+    end
+    local t = {}
+    for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
+      str = str .. '\n'
+      table.insert(t, (str))
+    end
+    return t
+  end
+  
