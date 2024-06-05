@@ -10,7 +10,7 @@ loadSites.on_click(ShowList)
 print('button clicked')
 
 function ShowList()
-    list.set_content('showList called')
+    print('showList called')
     local response = getSites()
     local data = response:json()
     createList(data)
