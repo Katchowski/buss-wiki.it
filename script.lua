@@ -5,28 +5,12 @@ local list = get('list')
 
 print('get elements complete')
 
-loadSites.on_click(ShowList)
-
-print('button clicked')
-
-function ShowList()
-    print('showList called')
-    local response = GetSites()
-    local data = response:json()
-    CreateList(data)
-end
-
-function GetSites()
-    print('getSites called')
+loadSites.on_click(function()
     local res = fetch({
         url = "https://api.buss.lol/domains",
         method = "GET",
         headers = {["Content-Type"] = "Application/json"}
     })
-    return res
-end
-
-function CreateList(data)
-    print('createList called')
+    local data = res:json()
     list.set_content(data)
-end
+end)
