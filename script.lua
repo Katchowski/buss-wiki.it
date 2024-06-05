@@ -1,27 +1,32 @@
-print('Hello, World!')
+print('file loaded')
 
 local loadSites = get('loadSites')
 local list = get('list')
 
-loadSites.on_click(ShowList())
+print('get elements complete')
 
-print('Hello Again, World!')
+loadSites.on_click(ShowList)
 
-function GetSites()
-    local res = fetch({
-        url = "https://api.buss.lol/domains",
-        method = "GET"
-    })
-    return "returned value"
-end
+print('button clicked')
 
 function ShowList()
-    list.set_content('testing...')
+    list.set_content('showList called')
     local response = getSites()
     local data = response:json()
     createList(data)
 end
 
+function GetSites()
+    print('getSites called')
+    local res = fetch({
+        url = "https://api.buss.lol/domains",
+        method = "GET",
+        headers = {["Content-Type"] = "Application/json"}
+    })
+    return res
+end
+
 function CreateList(data)
-    list.set_content('It is working!')
+    print('createList called')
+    list.set_content(res)
 end
