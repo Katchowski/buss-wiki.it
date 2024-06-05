@@ -8,7 +8,6 @@ print('Hello Again, World!')
 loadSites.on_click(ShowList())
 
 function GetSites()
-    list.set_content('Loading...')
     local res = fetch({
         url = "https://api.buss.lol/domains",
         method = "GET"
@@ -17,7 +16,7 @@ function GetSites()
 end
 
 function ShowList()
-    loadSites.set_content('Loading...')
+    list.set_content('testing...')
     local response = getSites()
     local data = response:json()
     createList(data)
